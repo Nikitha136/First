@@ -12,17 +12,17 @@ pipeline {
     } 
      stage('Build') {  
             steps { 
-                sh 'mvn clean package'  
+                bat 'mvn clean package'  
             } 
       } 
      stage('Test') {  
             steps { 
-                sh 'mvn test'  
+                bat 'mvn test'  
             } 
       } 
      stage('Run Application') {  
             steps { 
-                sh 'java –jar target/first-0.0.1-SNAPSHOT.jar'  
+                bat 'java –jar target/first-0.0.1-SNAPSHOT.jar'  
             } 
       } 
     } 
